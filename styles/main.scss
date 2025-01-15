@@ -5,6 +5,7 @@
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.1);
     }
@@ -22,7 +23,7 @@
         img {
             filter: brightness(50%);
         }
-    
+
         .carousel-description {
             position: absolute;
             z-index: 5;
@@ -67,25 +68,28 @@
         justify-content: center;
         max-width: 1240px;
         margin: auto;
+        padding-bottom: 5dvh;
 
         h1 {
             font-size: 3rem;
         }
-    
-        h1, p {
+
+        h1,
+        p {
             margin-top: 5dvh;
             text-align: center;
             color: $text;
         }
-    
+
         .card-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2dvh;
+            margin-top: 3dvh;
             margin-bottom: 8dvh;
 
             .card {
-                box-shadow:  0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+                box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
                 border-radius: 2dvh;
                 overflow: hidden;
 
@@ -136,4 +140,111 @@
     }
 }
 
+.gastronomy-background {
+    background-color: $darkBlue;
 
+    .gastronomy {
+        display: flex;
+        flex-direction: column;
+        max-width: 1240px;
+        margin: auto;
+
+        h2 {
+            font-size: 2.7rem;
+            color: $white;
+            text-align: center;
+            margin-top: 5dvh;
+        }
+
+        p {
+            color: $white;
+            text-align: center;
+            margin-top: 5dvh;
+            margin-bottom: 3dvh;
+        }
+
+        .food-grid,
+        .card-food {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2dvh;
+            position: relative;
+            padding-bottom: 5dvh;
+            overflow: hidden;
+
+            .food-img {
+                width: 50dvh;
+                object-fit: cover;
+                filter: brightness(30%);
+                transition: transform .8s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .food-name {
+                position: absolute;
+                opacity: 0;
+                text-align: center;
+                top: 50%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:hover .food-name {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.activities-background {
+    background-color: $secondaryWhite;
+
+    .activities {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+            padding-top: 5dvh;
+            padding-bottom: 2dvh;
+            font-size: 2.7rem;
+            color: $text;
+        }
+
+        p {
+            padding-bottom: 5dvh;
+            color: $text;
+        }
+    }
+}
+
+#carouselExampleIndicators {
+    img {
+        height: 80dvh;
+        object-fit: cover;
+    }
+}
+
+.location-background {
+    background-color: $secondaryWhite;
+
+    .location {
+        display: flex;
+        flex-direction: column;
+        max-width: 1240px;
+        margin: auto;
+        text-align: center;
+        padding-top: 5dvh;
+        padding-bottom: 5dvh;
+
+        h2 {
+            font-size: 2.7rem;
+            color: $text;
+            padding-bottom: 3dvh;
+        }
+    }
+}

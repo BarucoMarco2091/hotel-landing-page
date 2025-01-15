@@ -1,0 +1,39 @@
+@import '../styles/variables.scss';
+
+.whatsapp-btn {
+    border-radius: 50%;
+    position: fixed;
+    right: 5dvh;
+    bottom: 5dvh;
+    z-index: 6;
+    max-width: 5dvh;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    img {
+        width: 7dvh;
+        transition: transform 0.4s;
+    }
+
+    span {
+        visibility: hidden;
+        color: $blue;
+        text-align: center;
+        font-size: 1rem;
+        position: absolute;
+        left: -6dvh;
+        top: -15dvh;
+        padding: 1dvh;
+        transition: opacity 0.5s;
+        border-radius: 1dvh;
+    }
+}
+
+.whatsapp-btn:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.2);
+}

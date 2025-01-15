@@ -4,6 +4,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+footer {
+  background-color: #444444;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+  padding-top: 5dvh;
+}
+footer .footer-container .footer-logo {
+  color: #FFF;
+}
+footer .footer-container .footer-copyright {
+  color: #FFF;
+}
+footer .footer-container i {
+  color: #FFF;
+  margin-right: 2dvh;
+  transition: color 0.8s;
+}
+footer .footer-container i:hover {
+  color: #61CE70;
+}
+
 header {
   background-color: #444444;
 }
@@ -99,11 +128,13 @@ nav i:hover {
   justify-content: center;
   max-width: 1240px;
   margin: auto;
+  padding-bottom: 5dvh;
 }
 .background .accommodations h1 {
   font-size: 3rem;
 }
-.background .accommodations h1, .background .accommodations p {
+.background .accommodations h1,
+.background .accommodations p {
   margin-top: 5dvh;
   text-align: center;
   color: #363636;
@@ -112,6 +143,7 @@ nav i:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2dvh;
+  margin-top: 3dvh;
   margin-bottom: 8dvh;
 }
 .background .accommodations .card-grid .card {
@@ -138,12 +170,155 @@ nav i:hover {
   text-align: center;
   color: #363636;
   margin-bottom: 1dvh;
+  transition: border 0.8s;
+}
+.background .accommodations .card-grid .card .card-btn:hover {
+  border: solid 1px #f71735;
+  animation: pulse 1s linear;
 }
 .background .accommodations .accommodation-btn {
   margin-top: 5dvh;
   margin: 0 auto;
   width: 35dvh;
   height: 6dvh;
+  transition: border 0.8s;
+}
+.background .accommodations .accommodation-btn:hover {
+  border: solid 1px #f71735;
+  animation: pulse 1s linear;
+}
+
+.gastronomy-background {
+  background-color: #011627;
+}
+.gastronomy-background .gastronomy {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: auto;
+}
+.gastronomy-background .gastronomy h2 {
+  font-size: 2.7rem;
+  color: #FFF;
+  text-align: center;
+  margin-top: 5dvh;
+}
+.gastronomy-background .gastronomy p {
+  color: #FFF;
+  text-align: center;
+  margin-top: 5dvh;
+  margin-bottom: 3dvh;
+}
+.gastronomy-background .gastronomy .food-grid,
+.gastronomy-background .gastronomy .card-food {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2dvh;
+  position: relative;
+  padding-bottom: 5dvh;
+}
+.gastronomy-background .gastronomy .food-grid .food-img,
+.gastronomy-background .gastronomy .card-food .food-img {
+  width: 50dvh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(30%);
+  transition: transform 0.8s;
+}
+.gastronomy-background .gastronomy .food-grid .food-img:hover,
+.gastronomy-background .gastronomy .card-food .food-img:hover {
+  transform: scale(1.1);
+}
+.gastronomy-background .gastronomy .food-grid .food-name,
+.gastronomy-background .gastronomy .card-food .food-name {
+  position: absolute;
+  visibility: hidden;
+  z-index: 22;
+}
+.gastronomy-background .gastronomy .food-grid .food-img:hover .food-name,
+.gastronomy-background .gastronomy .card-food .food-img:hover .food-name {
+  opacity: 1;
+  visibility: visible;
+}
+
+.activities-background {
+  background-color: #ECECEC;
+}
+.activities-background .activities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.activities-background .activities h2 {
+  padding-top: 5dvh;
+  padding-bottom: 2dvh;
+  font-size: 2.7rem;
+  color: #363636;
+}
+.activities-background .activities p {
+  padding-bottom: 5dvh;
+  color: #363636;
+}
+
+#carouselExampleIndicators img {
+  height: 80dvh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.location-background {
+  background-color: #ECECEC;
+}
+.location-background .location {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: auto;
+  text-align: center;
+  padding-top: 5dvh;
+  padding-bottom: 5dvh;
+}
+.location-background .location h2 {
+  font-size: 2.7rem;
+  color: #363636;
+  padding-bottom: 3dvh;
+}
+
+.whatsapp-btn {
+  border-radius: 50%;
+  position: fixed;
+  right: 5dvh;
+  bottom: 5dvh;
+  z-index: 6;
+  max-width: 5dvh;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.whatsapp-btn img {
+  width: 7dvh;
+  transition: transform 0.4s;
+}
+.whatsapp-btn span {
+  visibility: hidden;
+  color: #FFF;
+  text-align: center;
+  font-size: 1rem;
+  position: absolute;
+  left: -6dvh;
+  top: -15dvh;
+  padding: 1dvh;
+  transition: opacity 0.5s;
+  border-radius: 1dvh;
+}
+
+.whatsapp-btn:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.2);
 }
 
 * {
