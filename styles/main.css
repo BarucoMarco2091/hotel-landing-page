@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+#carouselExample img {
+  height: 80dvh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#carouselExample .carousel-item {
+  position: relative;
+}
+#carouselExample .carousel-item img {
+  filter: brightness(50%);
+}
+#carouselExample .carousel-item .carousel-description {
+  position: absolute;
+  z-index: 5;
+  bottom: 50%;
+  right: 30%;
+  color: #FFF;
+}
+#carouselExample .carousel-item .carousel-description .carousel-paragraph {
+  font-weight: bold;
+}
+#carouselExample .carousel-item .carousel-description .carousel-paragraph-02 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#carouselExample .carousel-item .carousel-description .carousel-button {
+  width: 32dvh;
+  height: 6dvh;
+  border: none;
+  border-radius: 2dvh;
+  background-color: #f71735;
+  color: #FFF;
+  transition: color 0.8s;
+  animation: pulse 1s infinite linear;
+}
+#carouselExample .carousel-item .carousel-description .carousel-button:hover {
+  background-color: #a12636;
+}
+
+.background {
+  background-color: #ECECEC;
+}
+.background .accommodations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  max-width: 1240px;
+  margin: auto;
+}
+.background .accommodations h1 {
+  font-size: 3rem;
+}
+.background .accommodations h1, .background .accommodations p {
+  margin-top: 5dvh;
+  text-align: center;
+  color: #363636;
+}
+.background .accommodations .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2dvh;
+  margin-bottom: 8dvh;
+}
+.background .accommodations .card-grid .card {
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  border-radius: 2dvh;
+  overflow: hidden;
+}
+.background .accommodations .card-grid .card .card-img {
+  transition: transform 0.8s;
+}
+.background .accommodations .card-grid .card .card-img:hover {
+  transform: scale(1.1);
+}
+.background .accommodations .card-grid .card .card-paragraph {
+  color: #363636;
+}
+.background .accommodations .card-grid .card .card-btn {
+  width: 20dvh;
+  height: 5dvh;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  border: solid 1px #444444;
+  text-align: center;
+  color: #363636;
+  margin-bottom: 1dvh;
+  transition: border 0.8s;
+}
+.background .accommodations .card-grid .card .card-btn:hover {
+  border: solid 1px #f71735;
+  animation: pulse 1s linear;
+}
+.background .accommodations .accommodation-btn {
+  margin-top: 5dvh;
+  margin: 0 auto;
+  width: 35dvh;
+  height: 6dvh;
+  transition: border 0.8s;
+}
+.background .accommodations .accommodation-btn:hover {
+  border: solid 1px #f71735;
+  animation: pulse 1s linear;
+}/*# sourceMappingURL=main.css.map */

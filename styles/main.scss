@@ -1,0 +1,139 @@
+@import '../styles/variables.scss';
+
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#carouselExample {
+    img {
+        height: 80dvh;
+        object-fit: cover;
+    }
+
+    .carousel-item {
+        position: relative;
+
+        img {
+            filter: brightness(50%);
+        }
+    
+        .carousel-description {
+            position: absolute;
+            z-index: 5;
+            bottom: 50%;
+            right: 30%;
+            color: $white;
+
+            .carousel-paragraph {
+                font-weight: bold;
+            }
+
+            .carousel-paragraph-02 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .carousel-button {
+                width: 32dvh;
+                height: 6dvh;
+                border: none;
+                border-radius: 2dvh;
+                background-color: $red;
+                color: $white;
+                transition: color .8s;
+                animation: pulse 1s infinite linear;
+            }
+
+            .carousel-button:hover {
+                background-color: $primaryRed;
+            }
+        }
+    }
+}
+
+.background {
+    background-color: $secondaryWhite;
+
+    .accommodations {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        max-width: 1240px;
+        margin: auto;
+
+        h1 {
+            font-size: 3rem;
+        }
+    
+        h1, p {
+            margin-top: 5dvh;
+            text-align: center;
+            color: $text;
+        }
+    
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2dvh;
+            margin-bottom: 8dvh;
+
+            .card {
+                box-shadow:  0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+                border-radius: 2dvh;
+                overflow: hidden;
+
+                .card-img {
+                    transition: transform .8s;
+                }
+
+                .card-img:hover {
+                    transform: scale(1.1);
+                }
+
+                .card-paragraph {
+                    color: $text;
+                }
+
+                .card-btn {
+                    width: 20dvh;
+                    height: 5dvh;
+                    margin: 0 auto;
+                    border: none;
+                    background-color: transparent;
+                    border: solid 1px $primaryBlack;
+                    text-align: center;
+                    color: $text;
+                    margin-bottom: 1dvh;
+                    transition: border .8s;
+                }
+
+                .card-btn:hover {
+                    border: solid 1px $red;
+                    animation: pulse 1s linear;
+                }
+            }
+        }
+
+        .accommodation-btn {
+            margin-top: 5dvh;
+            margin: 0 auto;
+            width: 35dvh;
+            height: 6dvh;
+            transition: border .8s;
+        }
+
+        .accommodation-btn:hover {
+            border: solid 1px $red;
+            animation: pulse 1s linear;
+        }
+    }
+}
+
+

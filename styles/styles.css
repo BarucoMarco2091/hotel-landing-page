@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+header {
+  background-color: #444444;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+  padding: 3dvh;
+}
+nav .logo {
+  color: #FFF;
+}
+nav .nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 5dvh;
+  list-style-type: none;
+}
+nav .nav-list .nav-link {
+  color: #FFF;
+}
+nav .nav-list a {
+  transition: color 0.8s;
+}
+nav .nav-list a:hover {
+  color: #61CE70;
+}
+nav .nav-social-media i {
+  color: #FFF;
+  transition: color 0.8s;
+  margin-right: 2dvh;
+}
+nav i:hover {
+  color: #61CE70;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+#carouselExample img {
+  height: 80dvh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#carouselExample .carousel-item {
+  position: relative;
+}
+#carouselExample .carousel-item img {
+  filter: brightness(50%);
+}
+#carouselExample .carousel-item .carousel-description {
+  position: absolute;
+  z-index: 5;
+  bottom: 50%;
+  right: 30%;
+  color: #FFF;
+}
+#carouselExample .carousel-item .carousel-description .carousel-paragraph {
+  font-weight: bold;
+}
+#carouselExample .carousel-item .carousel-description .carousel-paragraph-02 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#carouselExample .carousel-item .carousel-description .carousel-button {
+  width: 32dvh;
+  height: 6dvh;
+  border: none;
+  border-radius: 2dvh;
+  background-color: #f71735;
+  color: #FFF;
+  transition: color 0.8s;
+  animation: pulse 1s infinite linear;
+}
+#carouselExample .carousel-item .carousel-description .carousel-button:hover {
+  background-color: #a12636;
+}
+
+.background {
+  background-color: #ECECEC;
+}
+.background .accommodations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  max-width: 1240px;
+  margin: auto;
+}
+.background .accommodations h1 {
+  font-size: 3rem;
+}
+.background .accommodations h1, .background .accommodations p {
+  margin-top: 5dvh;
+  text-align: center;
+  color: #363636;
+}
+.background .accommodations .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2dvh;
+  margin-bottom: 8dvh;
+}
+.background .accommodations .card-grid .card {
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  border-radius: 2dvh;
+  overflow: hidden;
+}
+.background .accommodations .card-grid .card .card-img {
+  transition: transform 0.8s;
+}
+.background .accommodations .card-grid .card .card-img:hover {
+  transform: scale(1.1);
+}
+.background .accommodations .card-grid .card .card-paragraph {
+  color: #363636;
+}
+.background .accommodations .card-grid .card .card-btn {
+  width: 20dvh;
+  height: 5dvh;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  border: solid 1px #444444;
+  text-align: center;
+  color: #363636;
+  margin-bottom: 1dvh;
+}
+.background .accommodations .accommodation-btn {
+  margin-top: 5dvh;
+  margin: 0 auto;
+  width: 35dvh;
+  height: 6dvh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+header {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2 {
+  font-family: "Poppins", serif;
+}
+
+p {
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+}
+
+button {
+  font-size: 1rem;
+  font-family: "Roboto", serif;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+svg {
+  width: 100%;
+}
+
+i {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+}/*# sourceMappingURL=styles.css.map */

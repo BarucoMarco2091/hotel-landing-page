@@ -1,0 +1,46 @@
+@import '../styles/variables.scss';
+
+header {
+    background-color: $primaryBlack;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: auto;
+    padding: 3dvh;
+
+    .logo {
+        color: $white;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 5dvh;
+        list-style-type: none;
+
+        .nav-link {
+            color: $white;
+        }
+
+        a {
+            transition: color .8s;
+        }
+
+        a:hover {
+            color: $green;
+        }
+    }
+
+    .nav-social-media i {
+        color: $white;
+        transition: color .8s;
+        margin-right: 2dvh;
+    }
+
+    i:hover {
+        color: $green;
+    }
+}
