@@ -13,7 +13,7 @@
 
 #carouselExample {
     img {
-        height: 80dvh;
+        height: 80%;
         object-fit: cover;
     }
 
@@ -58,10 +58,40 @@
     }
 }
 
+#about {
+    display: flex;
+    max-width: 1240px;
+    margin: auto;
+    padding-top: 5dvh;
+    padding-bottom: 5dvh;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 4dvh;
+        color: $text;
+        font-size: 3.5rem;
+    }
+
+    p {
+        text-align: center;
+        color: $text;
+        line-height: 2rem;
+        margin-right: 1dvh;
+    }
+
+    img {
+        border-radius: 1dvh;
+    }
+
+    div {
+        flex: 1;
+    }
+}
+
 .background {
     background-color: $secondaryWhite;
 
-    .accommodations {
+    #accommodations {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -81,12 +111,17 @@
             color: $text;
         }
 
+        p {
+            line-height: 1.5rem;
+        }
+
         .card-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2dvh;
             margin-top: 3dvh;
             margin-bottom: 8dvh;
+            
 
             .card {
                 box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
@@ -123,6 +158,7 @@
                     animation: pulse 1s linear;
                 }
             }
+            
         }
 
         .accommodation-btn {
@@ -143,7 +179,7 @@
 .gastronomy-background {
     background-color: $darkBlue;
 
-    .gastronomy {
+    #gastronomy {
         display: flex;
         flex-direction: column;
         max-width: 1240px;
@@ -161,6 +197,7 @@
             text-align: center;
             margin-top: 5dvh;
             margin-bottom: 3dvh;
+            line-height: 1.5rem;
         }
 
         .food-grid,
@@ -202,7 +239,7 @@
 .activities-background {
     background-color: $secondaryWhite;
 
-    .activities {
+    #activities {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -218,14 +255,16 @@
         p {
             padding-bottom: 5dvh;
             color: $text;
+            line-height: 1.5rem;
         }
     }
 }
 
 #carouselExampleIndicators {
     img {
-        height: 80dvh;
+        height: 80%;
         object-fit: cover;
+        filter: brightness(50%);
     }
 }
 

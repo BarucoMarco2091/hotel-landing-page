@@ -1,3 +1,5 @@
+AOS.init();
+
 const foodData = [
     {
         "image": "../assets/farofa-bife.jpg",

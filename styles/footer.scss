@@ -1,5 +1,14 @@
 @import '../styles/variables.scss';
 
+@keyframes scaleUp {
+    from {
+        transform: translateY(8px);
+    }
+    to {
+        transform: translateY(-8px);
+    }
+}
+
 footer {
     background-color: $primaryBlack;
 
@@ -26,6 +35,7 @@ footer {
 
         i:hover {
             color: $green;
+            animation: scaleUp 1s infinite linear;
         }
     }
 }

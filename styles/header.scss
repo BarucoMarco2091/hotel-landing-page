@@ -1,5 +1,18 @@
 @import '../styles/variables.scss';
 
+@keyframes scaleUp {
+    from {
+        transform: translateY(8px);
+    }
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     background-color: $primaryBlack;
 }
@@ -38,9 +51,11 @@ nav {
         color: $white;
         transition: color .8s;
         margin-right: 2dvh;
+        transition: animation .8s;
     }
 
     i:hover {
         color: $green;
+        animation: scaleUp 1s infinite linear;
     }
 }

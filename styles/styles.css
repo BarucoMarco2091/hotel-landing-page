@@ -8,6 +8,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes scaleUp {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
 footer {
   background-color: #444444;
 }
@@ -31,6 +39,19 @@ footer .footer-container i {
 }
 footer .footer-container i:hover {
   color: #61CE70;
+  animation: scaleUp 1s infinite linear;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -66,9 +87,11 @@ nav .nav-social-media i {
   color: #FFF;
   transition: color 0.8s;
   margin-right: 2dvh;
+  transition: animation 0.8s;
 }
 nav i:hover {
   color: #61CE70;
+  animation: scaleUp 1s infinite linear;
 }
 
 @keyframes pulse {
@@ -80,7 +103,7 @@ nav i:hover {
   }
 }
 #carouselExample img {
-  height: 80dvh;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -118,10 +141,36 @@ nav i:hover {
   background-color: #a12636;
 }
 
+#about {
+  display: flex;
+  max-width: 1240px;
+  margin: auto;
+  padding-top: 5dvh;
+  padding-bottom: 5dvh;
+}
+#about h1 {
+  text-align: center;
+  margin-bottom: 4dvh;
+  color: #363636;
+  font-size: 3.5rem;
+}
+#about p {
+  text-align: center;
+  color: #363636;
+  line-height: 2rem;
+  margin-right: 1dvh;
+}
+#about img {
+  border-radius: 1dvh;
+}
+#about div {
+  flex: 1;
+}
+
 .background {
   background-color: #ECECEC;
 }
-.background .accommodations {
+.background #accommodations {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -130,37 +179,40 @@ nav i:hover {
   margin: auto;
   padding-bottom: 5dvh;
 }
-.background .accommodations h1 {
+.background #accommodations h1 {
   font-size: 3rem;
 }
-.background .accommodations h1,
-.background .accommodations p {
+.background #accommodations h1,
+.background #accommodations p {
   margin-top: 5dvh;
   text-align: center;
   color: #363636;
 }
-.background .accommodations .card-grid {
+.background #accommodations p {
+  line-height: 1.5rem;
+}
+.background #accommodations .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2dvh;
   margin-top: 3dvh;
   margin-bottom: 8dvh;
 }
-.background .accommodations .card-grid .card {
+.background #accommodations .card-grid .card {
   box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
   border-radius: 2dvh;
   overflow: hidden;
 }
-.background .accommodations .card-grid .card .card-img {
+.background #accommodations .card-grid .card .card-img {
   transition: transform 0.8s;
 }
-.background .accommodations .card-grid .card .card-img:hover {
+.background #accommodations .card-grid .card .card-img:hover {
   transform: scale(1.1);
 }
-.background .accommodations .card-grid .card .card-paragraph {
+.background #accommodations .card-grid .card .card-paragraph {
   color: #363636;
 }
-.background .accommodations .card-grid .card .card-btn {
+.background #accommodations .card-grid .card .card-btn {
   width: 20dvh;
   height: 5dvh;
   margin: 0 auto;
@@ -172,18 +224,18 @@ nav i:hover {
   margin-bottom: 1dvh;
   transition: border 0.8s;
 }
-.background .accommodations .card-grid .card .card-btn:hover {
+.background #accommodations .card-grid .card .card-btn:hover {
   border: solid 1px #f71735;
   animation: pulse 1s linear;
 }
-.background .accommodations .accommodation-btn {
+.background #accommodations .accommodation-btn {
   margin-top: 5dvh;
   margin: 0 auto;
   width: 35dvh;
   height: 6dvh;
   transition: border 0.8s;
 }
-.background .accommodations .accommodation-btn:hover {
+.background #accommodations .accommodation-btn:hover {
   border: solid 1px #f71735;
   animation: pulse 1s linear;
 }
@@ -191,80 +243,86 @@ nav i:hover {
 .gastronomy-background {
   background-color: #011627;
 }
-.gastronomy-background .gastronomy {
+.gastronomy-background #gastronomy {
   display: flex;
   flex-direction: column;
   max-width: 1240px;
   margin: auto;
 }
-.gastronomy-background .gastronomy h2 {
+.gastronomy-background #gastronomy h2 {
   font-size: 2.7rem;
   color: #FFF;
   text-align: center;
   margin-top: 5dvh;
 }
-.gastronomy-background .gastronomy p {
+.gastronomy-background #gastronomy p {
   color: #FFF;
   text-align: center;
   margin-top: 5dvh;
   margin-bottom: 3dvh;
+  line-height: 1.5rem;
 }
-.gastronomy-background .gastronomy .food-grid,
-.gastronomy-background .gastronomy .card-food {
+.gastronomy-background #gastronomy .food-grid,
+.gastronomy-background #gastronomy .card-food {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2dvh;
   position: relative;
   padding-bottom: 5dvh;
+  overflow: hidden;
 }
-.gastronomy-background .gastronomy .food-grid .food-img,
-.gastronomy-background .gastronomy .card-food .food-img {
+.gastronomy-background #gastronomy .food-grid .food-img,
+.gastronomy-background #gastronomy .card-food .food-img {
   width: 50dvh;
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(30%);
   transition: transform 0.8s;
 }
-.gastronomy-background .gastronomy .food-grid .food-img:hover,
-.gastronomy-background .gastronomy .card-food .food-img:hover {
+.gastronomy-background #gastronomy .food-grid .food-img:hover,
+.gastronomy-background #gastronomy .card-food .food-img:hover {
   transform: scale(1.1);
 }
-.gastronomy-background .gastronomy .food-grid .food-name,
-.gastronomy-background .gastronomy .card-food .food-name {
+.gastronomy-background #gastronomy .food-grid .food-name,
+.gastronomy-background #gastronomy .card-food .food-name {
   position: absolute;
-  visibility: hidden;
-  z-index: 22;
+  opacity: 0;
+  text-align: center;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
 }
-.gastronomy-background .gastronomy .food-grid .food-img:hover .food-name,
-.gastronomy-background .gastronomy .card-food .food-img:hover .food-name {
+.gastronomy-background #gastronomy .food-grid:hover .food-name,
+.gastronomy-background #gastronomy .card-food:hover .food-name {
   opacity: 1;
-  visibility: visible;
 }
 
 .activities-background {
   background-color: #ECECEC;
 }
-.activities-background .activities {
+.activities-background #activities {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-.activities-background .activities h2 {
+.activities-background #activities h2 {
   padding-top: 5dvh;
   padding-bottom: 2dvh;
   font-size: 2.7rem;
   color: #363636;
 }
-.activities-background .activities p {
+.activities-background #activities p {
   padding-bottom: 5dvh;
   color: #363636;
+  line-height: 1.5rem;
 }
 
 #carouselExampleIndicators img {
-  height: 80dvh;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: brightness(50%);
 }
 
 .location-background {
@@ -301,7 +359,7 @@ nav i:hover {
 }
 .whatsapp-btn span {
   visibility: hidden;
-  color: #FFF;
+  color: #4054B2;
   text-align: center;
   font-size: 1rem;
   position: absolute;

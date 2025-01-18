@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/whatsapp-btn.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -24,24 +26,24 @@
     <header>
         <nav>
             <div class="logo">
-                <i class="fa-solid fa-hotel">Inn</i>
+                <i class="fa-solid fa-hotel">Inn Hotel</i>
             </div>
             <div class="nav-menu">
                 <ul class="nav-list">
                     <li>
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">O Hotel</a>
+                        <a class="nav-link" href="#about">O Hotel</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Acomodações</a>
+                        <a class="nav-link" href="#accommodations">Acomodações</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Gastronomia</a>
+                        <a class="nav-link" href="#gastronomy">Gastronomia</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Lazer</a>
+                        <a class="nav-link" href="#activities">Lazer</a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">Contato</a>
@@ -55,7 +57,7 @@
         </nav>
     </header>
     <main>
-        <div id="carouselExample" class="carousel slide">
+        <div id="carouselExample" class="carousel slide" data-aos="fade-up"  data-aos-duration="1500">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/hotel.png" class="d-block w-100" alt="hotel">
@@ -97,23 +99,33 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <section id="about">
+            <div class="about-text" data-aos="fade-right" data-aos-duration="2000">
+                <h1>O Hotel</h1>
+                <p>Situado em Peruíbe, o Inn Hotel é o lugar ideal para quem busca conforto, sofisticação<br>e momentos inesquecíveis. Com uma combinação perfeita de elegância e<br>hospitalidade, oferecemos uma experiência única para nossos hóspedes, seja para lazer ou negócios.</p>
+            </div>
+            <div class="about-img">
+                <img src="assets/hotel.png" alt="hotel" loading="lazy" data-aos="fade-left" data-aos-duration="2000">
+            </div>
+        </section>
         <section class="background">
-            <section class="accommodations">
-                <h1>Nossas acomodações</h1>
+            <section id="accommodations">
+                <h1>Nossas Acomodações</h1>
                 <p>Conheça as nossas acomodações, com estilo rústico e confortável.<br>Possuímos acomodações que atendem
                     a diferentes tamanhos de famílias,<br>grupos e gostos.</p>
                 <section class="card-grid">
-                    <section class="card">
-                        <img class="card-img" src="assets/suite-presidencial.png" alt="suíte presidencial" loading="lazy">
+                    <section class="card position" data-aos="fade-up-right" data-aos-duration="2000">
+                        <img class="card-img" src="assets/suite-presidencial.png" alt="suíte presidencial"
+                            loading="lazy">
                         <p class="card-paragraph">Suíte Presidencial</p>
                         <button class="card-btn">Conheça agora</button>
                     </section>
-                    <section class="card">
+                    <section class="card position-1" data-aos="fade-up-right" data-aos-duration="3000">
                         <img class="card-img" src="assets/suite-master.png" alt="suíte master" loading="lazy">
                         <p class="card-paragraph">Suíte Master</p>
                         <button class="card-btn">Conheça agora</button>
                     </section>
-                    <section class="card">
+                    <section class="card position-2" data-aos="fade-up-right" data-aos-duration="4000">
                         <img class="card-img" src="assets/suite-executiva.png" alt="suíte executiva" loading="lazy">
                         <p class="card-paragraph">Suíte Executiva</p>
                         <button class="card-btn">Conheça agora</button>
@@ -123,50 +135,61 @@
             </section>
         </section>
         <section class="gastronomy-background">
-            <section class="gastronomy">
+            <section id="gastronomy">
                 <h2>Gastronomia</h2>
                 <p>Com nosso restaurante self-service você poderá experimentar de tudo! Oferecemos comida
                     caseira,<br>sadia e farta com diversos tipos de pratos quentes e saladas, sendo uma boa parte dos
                     produtos<br>cultivados no próprio hotel.</p>
-                <section class="food-grid">
+                <section class="food-grid" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
 
                 </section>
             </section>
         </section>
         <section class="activities-background">
-            <section class="activities">
+            <section id="activities" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <h2>Atividades e Lazer</h2>
-                <p>Aqui ninguém fica parado! São atividades de lazer para todas as idades acontecendo em todo o<br>hotel, do nascer ao pôr-do-sol. E o melhor, tudo já incluso na diária, sem qualquer custo adicional.</p>
+                <p>Aqui ninguém fica parado! São atividades de lazer para todas as idades acontecendo em todo
+                    o<br>hotel, do nascer ao pôr-do-sol. E o melhor, tudo já incluso na diária, sem qualquer custo
+                    adicional.</p>
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="assets/piscina.png" class="d-block w-100" alt="piscina">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/piscina-bar-molhado.png" class="d-block w-100" alt="piscina-bar-molhado">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/piscina.png" class="d-block w-100" alt="piscina">
-                      </div>
+                        <div class="carousel-item active">
+                            <img src="assets/piscina.png" class="d-block w-100" alt="piscina">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/piscina-bar-molhado.png" class="d-block w-100" alt="piscina-bar-molhado">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/tenis.png" class="d-block w-100" alt="tênis">
+                        </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
             </section>
         </section>
         <section class="location-background">
-            <section class="location">
+            <section class="location" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
                 <h2>Venha nos conhecer</h2>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.675335156761!2d-46.562459499999996!3d-23.687565799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce43b050d5cbbf%3A0x1ebd2a66bf8d294b!2sR.%20Arafura%20-%20S%C3%A3o%20Bernardo%20do%20Campo%2C%20SP%2C%2009726-210!5e0!3m2!1spt-BR!2sbr!4v1736967831162!5m2!1spt-BR!2sbr"
@@ -178,7 +201,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <i class="fa-solid fa-hotel">Inn</i>
+                <i class="fa-solid fa-hotel">Inn Hotel</i>
             </div>
             <div class="footer-copyright">
                 <p>&copy; Coyright 2025</p>
@@ -189,7 +212,9 @@
             </div>
         </div>
     </footer>
-    <a href="https://api.whatsapp.com/send?phone=55119962210403&text=Quero%20fazer%20um%20agendamento%20hoje!" class="whatsapp-btn" target="_blank"><img src="assets/whatssapp.svg" alt="whatsapp-img" loading="lazy" data-aos="zoom-in-up" data-aos-delay="400"><span>Reservar Agora!</span></a>
+    <a href="https://api.whatsapp.com/send?phone=55119962210403&text=Quero%20fazer%20uma%20reserva%20hoje!"
+        class="whatsapp-btn" target="_blank"><img src="assets/whatssapp.svg" alt="whatsapp-img" loading="lazy"
+            data-aos="zoom-in-up" data-aos-delay="400"><span>Reservar Agora!</span></a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
