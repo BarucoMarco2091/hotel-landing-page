@@ -1,1 +1,78 @@
-/*# sourceMappingURL=responsivity.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex !important;
+    padding: 1dvh 1dvh !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mobile_btn {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    position: relative !important;
+  }
+  .carousel-description {
+    position: absolute !important;
+    right: 10% !important;
+    bottom: 20% !important;
+    padding-left: 1.3dvh;
+    margin-top: 1dvh !important;
+  }
+  .carousel-paragraph {
+    display: none;
+  }
+  .carousel-paragraph-02 {
+    font-size: 1.4rem !important;
+  }
+  .carousel-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    padding: 1dvh 1dvh;
+  }
+  #accommodations {
+    display: flex;
+    flex-direction: column;
+    padding: 1dvh 1dvh;
+  }
+  #accommodations .card-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    padding: 1dvh 1dvh;
+  }
+}
+@media screen and (max-width: 768px) {
+  #gastronomy {
+    display: flex;
+    flex-direction: column;
+    padding: 1dvh 1dvh;
+  }
+  #gastronomy .food-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    padding: 1dvh 1dvh;
+  }
+  #activities {
+    padding: 1dvh 1dvh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .nav-list {
+    display: none !important;
+  }
+}/*# sourceMappingURL=responsivity.css.map */

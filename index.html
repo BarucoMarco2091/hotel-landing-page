@@ -54,10 +54,35 @@
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-instagram"></i>
             </div>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">O Hotel</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">Acomodações</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">Gastronomia</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">Lazer</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
-        <div id="carouselExample" class="carousel slide" data-aos="fade-up"  data-aos-duration="1500">
+        <div id="carouselExample" class="carousel slide" data-aos="fade-up" data-aos-duration="1500">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/hotel.png" class="d-block w-100" alt="hotel">
@@ -102,7 +127,9 @@
         <section id="about">
             <div class="about-text" data-aos="fade-right" data-aos-duration="2000">
                 <h1>O Hotel</h1>
-                <p>Situado em Peruíbe, o Inn Hotel é o lugar ideal para quem busca conforto, sofisticação<br>e momentos inesquecíveis. Com uma combinação perfeita de elegância e<br>hospitalidade, oferecemos uma experiência única para nossos hóspedes, seja para lazer ou negócios.</p>
+                <p>Situado em Peruíbe, o Inn Hotel é o lugar ideal para quem busca conforto, sofisticação<br>e momentos
+                    inesquecíveis. Com uma combinação perfeita de elegância e<br>hospitalidade, oferecemos uma
+                    experiência única para nossos hóspedes, seja para lazer ou negócios.</p>
             </div>
             <div class="about-img">
                 <img src="assets/hotel.png" alt="hotel" loading="lazy" data-aos="fade-left" data-aos-duration="2000">
@@ -140,16 +167,13 @@
                 <p>Com nosso restaurante self-service você poderá experimentar de tudo! Oferecemos comida
                     caseira,<br>sadia e farta com diversos tipos de pratos quentes e saladas, sendo uma boa parte dos
                     produtos<br>cultivados no próprio hotel.</p>
-                <section class="food-grid" data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine">
+                <section class="food-grid" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 
                 </section>
             </section>
         </section>
         <section class="activities-background">
-            <section id="activities" data-aos="flip-left"
-            data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <section id="activities" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <h2>Atividades e Lazer</h2>
                 <p>Aqui ninguém fica parado! São atividades de lazer para todas as idades acontecendo em todo
                     o<br>hotel, do nascer ao pôr-do-sol. E o melhor, tudo já incluso na diária, sem qualquer custo
@@ -188,8 +212,7 @@
             </section>
         </section>
         <section class="location-background">
-            <section class="location" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
+            <section class="location" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                 <h2>Venha nos conhecer</h2>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.675335156761!2d-46.562459499999996!3d-23.687565799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce43b050d5cbbf%3A0x1ebd2a66bf8d294b!2sR.%20Arafura%20-%20S%C3%A3o%20Bernardo%20do%20Campo%2C%20SP%2C%2009726-210!5e0!3m2!1spt-BR!2sbr!4v1736967831162!5m2!1spt-BR!2sbr"
@@ -218,6 +241,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/script.js"></script>
 </body>
 

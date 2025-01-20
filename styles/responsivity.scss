@@ -1,0 +1,92 @@
+@import '../styles/variables.scss';
+
+@media screen and (max-width: 600px) {
+    nav {
+        display: flex !important;
+        padding: 1dvh 1dvh !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #mobile_btn {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-item {
+        position: relative !important;
+    }
+
+    .carousel-description {
+        position: absolute !important;
+        right: 10% !important;
+        bottom: 20% !important;
+        padding-left: 1.3dvh;
+        margin-top: 1dvh !important;
+    }
+
+    .carousel-paragraph {
+        display: none;
+    }
+
+    .carousel-paragraph-02 {
+        font-size: 1.4rem !important;
+    }
+
+    .carousel-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        padding: 1dvh 1dvh;
+    }
+
+    #accommodations {
+        display: flex;
+        flex-direction: column;
+        padding: 1dvh 1dvh;
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr !important;
+            padding: 1dvh 1dvh;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #gastronomy {
+        display: flex;
+        flex-direction: column;
+        padding: 1dvh 1dvh;
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: 1fr !important;
+            padding: 1dvh 1dvh;
+        }
+    }
+
+    #activities {
+        padding: 1dvh 1dvh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .nav-list {
+        display: none !important;
+    }
+}
